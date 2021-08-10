@@ -34,6 +34,10 @@
             "prefix": "app",
             "style": "kebab-case"
           }
+        ],
+        "object-curly-spacing": [
+          "error",
+          "always"
         ]
       }
     },
@@ -44,7 +48,8 @@
       "extends": [
         "plugin:@angular-eslint/template/recommended"
       ],
-      "rules": {}
+      "rules": {
+      }
     }
   ]
 }
