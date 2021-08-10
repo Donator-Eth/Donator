@@ -1,0 +1,40 @@
+\:host
+  position: fixed
+  top: 0
+  width: 100%
+
+.site-header-wrapper
+  display: flex
+  justify-content: center
+  width: 100%
+  padding: 1em
+
+.site-header
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+  width: 50%
+  list-style: none
+
+  a
+    text-decoration: none
+    display: block
+    padding: 0.5em
+    color: white // TODO theming
+
+  li
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+  li:hover
+    background: #1565C0 // TODO theming
+    cursor: pointer
+
+  li:first-child
+    margin-right: 1em
+
+  li:last-child
+    margin-left: auto
