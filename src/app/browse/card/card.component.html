@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ request.title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="card-content">
+    <div class="card-content-row">
+      <img class="card-image" src="{{ request.imageSrc }}" alt="Image provided for the request">
+      <p class="card-description">{{ request.description }}</p>
+    </div>
+    <div class="card-content-info">
+      <div>Request Date: {{ request.requestDate }}</div>
+      <div>Donations Accepted: {{ request.donationsAccepted }}</div>
+      <div>Donations Outstanding: {{ request.donationsOutstanding }}</div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="card-actions">
+    <button mat-raised-button color="primary">Donate to "{{ request.requester }}"</button>
+  </mat-card-actions>
+</mat-card>

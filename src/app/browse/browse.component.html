@@ -1,0 +1,13 @@
+<div class="browse-container">
+  <div class="browse-col first-container sticky-container">
+    // TODO filter component
+  </div>
+
+  <div class="browse-col card-container">
+    <app-card class="card-item" *ngFor="let request of requests; index as i" [request]="requests[i]"></app-card>
+  </div>
+
+  <div class="browse-col third-container sticky-container">
+    // TODO some other component
+  </div>
+</div>

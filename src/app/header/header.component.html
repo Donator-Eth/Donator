@@ -2,10 +2,9 @@
   <mat-toolbar class="site-header" color="primary">
     <li>
       <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-      <a href="#">Home</a>
+      <a routerLink="/home" routerLinkActive="active">Home</a>
     </li>
-    <li><a href="#">Page 1</a></li>
-    <li><a href="#">Page 2</a></li>
+    <li><a routerLink="/browse" routerLinkActive="active">Browse</a></li>
     <li>
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
         <mat-icon>menu</mat-icon>

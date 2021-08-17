@@ -1,0 +1,35 @@
+.browse-container
+  padding: 8em 2em 2em 2em
+  box-sizing: border-box
+  height: 100%
+  overflow: auto
+  display: flex
+  flex-direction: row
+  align-content: center
+  justify-content: center
+
+  .browse-col
+    margin: 0 2em
+
+    &.sticky-container
+      position: sticky
+      min-height: 100%
+      top: 0
+      align-self: flex-start
+
+    &.first-container
+      width: 25%
+      background-color: red
+
+    &.card-container
+      width: 50%
+      display: flex
+      flex-direction: column
+      background-color: orange
+
+      .card-item
+        padding-bottom: 5em
+
+    &.third-container
+      width: 25%
+      background-color: yellow
