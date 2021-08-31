@@ -1,0 +1,31 @@
+<div class="filter-wrapper">
+  <mat-button-toggle-group>
+    <mat-button-toggle value="list" checked>List</mat-button-toggle>
+    <mat-button-toggle value="grid">Grid</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <mat-card class="filter-list">
+    <mat-chip-list>
+      <mat-chip value="my_requests" [selected]="myRequestsSelected"
+                (click)="myRequestsSelected = !myRequestsSelected; myDonationsSelected = false;">My Requests</mat-chip>
+      <mat-chip value="my_donations" [selected]="myDonationsSelected"
+                (click)="myDonationsSelected = !myDonationsSelected; myRequestsSelected = false;">My Donations</mat-chip>
+    </mat-chip-list>
+
+    <mat-form-field>
+      <mat-label>Search range</mat-label>
+      <mat-date-range-input [rangePicker]="rangePicker" [max]="maxDate">
+        <input matStartDate [formControl]="startDate" placeholder="Start date">
+        <input matEndDate [formControl]="endDate" placeholder="End date">
+      </mat-date-range-input>
+      <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>
+      <mat-date-range-picker #rangePicker>
+        <mat-date-range-picker-actions>
+          <button mat-button matDateRangePickerCancel>Cancel</button>
+          <button mat-raised-button color="primary" matDateRangePickerApply>Apply</button>
+        </mat-date-range-picker-actions>
+      </mat-date-range-picker>
+    </mat-form-field>
+
+  </mat-card>
+</div>

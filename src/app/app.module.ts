@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderModule } from "./header/header.module";
 import { HomeModule } from "./home/home.module";
 import { BrowseModule } from "./browse/browse.module";
+import { MatNativeDateModule } from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { BrowseModule } from "./browse/browse.module";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatNativeDateModule,
     HeaderModule,
     HomeModule,
     BrowseModule
