@@ -11,6 +11,8 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatInputModule } from "@angular/material/input";
+import { CardCommentsComponent } from './card/card-comments/card-comments.component';
+import { MatIconModule } from "@angular/material/icon";
 
 
 
@@ -18,19 +20,21 @@ import { MatInputModule } from "@angular/material/input";
   declarations: [
     BrowseComponent,
     CardComponent,
-    FilterComponent
+    FilterComponent,
+    CardCommentsComponent
   ],
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatChipsModule,
-    MatFormFieldModule,
-    MatDatepickerModule,
-    ReactiveFormsModule,
-    MatInputModule
-  ],
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatButtonModule,
+        MatButtonToggleModule,
+        MatChipsModule,
+        MatFormFieldModule,
+        MatDatepickerModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatIconModule
+    ],
   exports: [
     BrowseComponent
   ]

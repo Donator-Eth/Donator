@@ -1,15 +1,14 @@
 .browse-container
-  padding: 8em 2em 2em 2em
+  padding: 10vh 2vw 2vh 2vw
   box-sizing: border-box
-  height: 100%
-  overflow: auto
+  height: 100vh
   display: flex
   flex-direction: row
   align-content: center
   justify-content: center
 
   .browse-col
-    padding: 0 2em
+    padding: 0 2vw
 
     &.sticky-container
       position: sticky
@@ -18,16 +17,13 @@
       align-self: flex-start
 
     &.first-container
-      width: 25%
+      width: 17vw
 
     &.card-container
-      width: 50%
+      width: 71vw
       display: flex
       flex-direction: column
 
-      .card-item
-        padding-bottom: 5em
-
-    &.third-container
-      width: 25%
-      background-color: yellow
+      app-card
+        width: 100%
+        padding-bottom: 4vh

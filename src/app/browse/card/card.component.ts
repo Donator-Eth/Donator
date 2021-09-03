@@ -11,6 +11,8 @@ export class CardComponent {
   @Input()
   request!: Request;
 
+  isExpanded: boolean = false;
+
   constructor() { }
 
 }
