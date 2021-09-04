@@ -2,49 +2,61 @@ mat-card
   display: inline-flex
   flex-direction: row
 
-  .card-main
-    padding-right: 1vw
-    width: 48vw
+  .card-main-wrapper
+    width: 49vw
     display: flex
-    flex-direction: row
+    flex-direction: column
     align-items: center
 
-    .card-inner
+    .card-main-row
       display: flex
-      flex-direction: column
+      flex-direction: row
+      align-items: center
 
-      mat-card-content
-        margin-bottom: 0
-
-      .card-content-row
-        padding-top: 1vh
-        display: flex
-        flex-direction: row
-        max-height: 75%
-
-        .card-image
-          width: 40%
-          padding-right: 1vw
-
-        .card-description
-          width: 60%
-
-      .card-content-col
+      .card-inner-col
         display: flex
         flex-direction: column
         align-items: center
-        padding-top: 1vh
 
-  .card-expanded-section
+        mat-card-content
+          margin-bottom: 0
+          padding-top: 8px
+          display: flex
+          flex-direction: row
+
+          .card-image
+            width: 40%
+            padding-right: 16px
+
+          .card-description
+            width: 60%
+
+    .card-expand-button
+      align-self: flex-end
+      margin-top: -40px
+
+      &:hover
+        background-color: rgba(0, 0, 0, 0.05)
+
+    .card-expanded-down
+      width: 100%
+      border-top: 1px solid rgba(0, 0, 0, 0.2)
+      display: flex
+      flex-direction: row
+      margin-top: 16px
+      padding-top: 16px
+
+  .card-expanded-right
     width: 18vw
-    padding-left: 1vw
+    margin-left: 16px
+    padding-left: 16px
     border-left: 1px solid rgba(0, 0, 0, 0.2)
     display: flex
     flex-direction: column
     align-content: center
 
-    .card-actions
-      width: 100%
+    .expanded-right-info
+      display: flex
+      flex-direction: column
+      align-items: center
 
-      button
-        width: 100%

@@ -1,32 +1,35 @@
 <mat-card>
-    <div class="card-main">
-      <div class="card-inner">
+  <div class="card-main-wrapper">
+    <div class="card-main-row">
+      <div class="card-inner-col">
         <mat-card-header>
           <mat-card-title>{{ request.title }}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <div class="card-content-row">
-            <img class="card-image" src="{{ request.imageSrc }}" alt="Image provided for the request">
-            <p class="card-description">{{ request.description }}</p>
-          </div>
-          <div class="card-content-col">
-            <div>Request Date: {{ request.requestDate }}</div>
-            <div>Donations Accepted: {{ request.donationsAccepted }}</div>
-            <div>Donations Outstanding: {{ request.donationsOutstanding }}</div>
-          </div>
+          <img class="card-image" src="{{ request.imageSrc }}" alt="Image provided for the request">
+          <p class="card-description">{{ request.description }}</p>
         </mat-card-content>
       </div>
-      <button mat-icon-button *ngIf="!isExpanded" (click)="isExpanded = true">
-        <mat-icon>arrow_forward_ios</mat-icon>
-      </button>
-      <button mat-icon-button *ngIf="isExpanded" (click)="isExpanded = false">
-        <mat-icon>arrow_back_ios</mat-icon>
-      </button>
     </div>
-    <div *ngIf="isExpanded" class="card-expanded-section">
-      <mat-card-actions class="card-actions">
-        <button mat-raised-button color="primary">Donate to "{{ request.requester }}"</button>
-      </mat-card-actions>
-      <app-card-comments></app-card-comments>
+
+    <button mat-icon-button class="card-expand-button" *ngIf="!isExpanded" (click)="toggleExpand()">
+      <mat-icon>open_in_full</mat-icon>
+    </button>
+    <button mat-icon-button class="card-expand-button" *ngIf="isExpanded" (click)="toggleExpand()">
+      <mat-icon>close_fullscreen</mat-icon>
+    </button>
+
+    <div *ngIf="isExpanded" class="card-expanded-down">
+      TODO donate fields and button
     </div>
+  </div>
+
+  <div *ngIf="isExpanded" class="card-expanded-right">
+    <div class="expanded-right-info">
+      <span>Request Date: {{ request.requestDate }}</span>
+      <span>Donations Accepted: {{ request.donationsAccepted }}</span>
+      <span>Donations Outstanding: {{ request.donationsOutstanding }}</span>
+    </div>
+    <app-card-comments></app-card-comments>
+  </div>
 </mat-card>

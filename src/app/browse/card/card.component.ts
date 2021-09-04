@@ -15,4 +15,7 @@ export class CardComponent {
 
   constructor() { }
 
+  toggleExpand() {
+    this.isExpanded = !this.isExpanded;
+  }
 }
